@@ -12,6 +12,7 @@
         <module>galaxy-dependencies</module>
         <module>galaxy-common</module>
         <module>galaxy-application</module>
+        <module>galaxy-module</module>
     </modules>
 
     <properties>
