@@ -1,0 +1,3 @@
+io.charlie.config.DateMetaObjectHandler
+io.charlie.config.MybatisPlusConfig
+io.charlie.config.SpringContextHolder

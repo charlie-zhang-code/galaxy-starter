@@ -1,0 +1,6 @@
+server:
+  port: 29066
+
+spring:
+  application:
+    name: app-system
