@@ -28,6 +28,7 @@ public class GlobalExceptionHandler {
             return Result.failure(e.getResultCode());
         }
         log.error("业务异常：{}", e.getMessage());
+        e.printStackTrace();
         return Result.failure(e.getMessage());
     }
 
@@ -35,6 +36,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(NoHandlerFoundException.class)
     public <T> Result<T> processException(NoHandlerFoundException e) {
         log.error("请求地址不存在：{}", e.getMessage());
+        e.printStackTrace();
         return Result.failure(ResultCode.NOT_FOUND, e.getMessage());
     }
 
@@ -42,13 +44,15 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(RuntimeException.class)
     public <T> Result<T> processException(RuntimeException e) {
         log.error("系统异常：{}", e.getMessage());
-        return Result.failure(ResultCode.SYSTEM_ERROR, e.getMessage());
+        e.printStackTrace();
+        return Result.failure(ResultCode.SYSTEM_ERROR, ResultCode.SYSTEM_ERROR.getMessage());
     }
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public <T> Result<T> processException(MethodArgumentNotValidException e) {
         log.error("参数异常：{}", Objects.requireNonNull(e.getBindingResult().getFieldError()).getDefaultMessage());
+        e.printStackTrace();
         return Result.failure(ResultCode.PARAM_NOT_NULL);
     }
 }

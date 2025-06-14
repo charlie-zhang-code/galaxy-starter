@@ -27,6 +27,7 @@
         <redisson.version>3.41.0</redisson.version>
         <druid.version>1.2.23</druid.version>
         <mybatis-plus.version>3.5.10</mybatis-plus.version>
+        <mongo-plus.version>2.1.8</mongo-plus.version>
 
         <!-- API 文档 -->
         <knife4j.version>4.4.0</knife4j.version>
@@ -120,6 +121,11 @@
                 <artifactId>mybatis-plus-generator</artifactId>
                 <version>${mybatis-plus.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.mongoplus</groupId>
+                <artifactId>mongo-plus-boot-starter</artifactId>
+                <version>${mongo-plus.version}</version>
+            </dependency>
 
             <!-- API 文档 -->
             <dependency>
@@ -160,12 +166,27 @@
             <!-- AI -->
             <dependency>
                 <groupId>dev.langchain4j</groupId>
+                <artifactId>langchain4j-spring-boot-starter</artifactId>
+                <version>${langchain4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dev.langchain4j</groupId>
                 <artifactId>langchain4j-ollama-spring-boot-starter</artifactId>
                 <version>${langchain4j.version}</version>
             </dependency>
             <dependency>
                 <groupId>dev.langchain4j</groupId>
                 <artifactId>langchain4j-reactor</artifactId>
+                <version>${langchain4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dev.langchain4j</groupId>
+                <artifactId>langchain4j-easy-rag</artifactId>
+                <version>${langchain4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dev.langchain4j</groupId>
+                <artifactId>langchain4j-embeddings-bge-small-en-v15-q</artifactId>
                 <version>${langchain4j.version}</version>
             </dependency>
 

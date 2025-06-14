@@ -9,16 +9,12 @@
         <version>${revision}</version>
     </parent>
 
-    <artifactId>common-ai</artifactId>
+    <artifactId>common-mongo</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>dev.langchain4j</groupId>
-            <artifactId>langchain4j-ollama-spring-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>dev.langchain4j</groupId>
-            <artifactId>langchain4j-reactor</artifactId>
+            <groupId>com.mongoplus</groupId>
+            <artifactId>mongo-plus-boot-starter</artifactId>
         </dependency>
     </dependencies>
 

@@ -14,12 +14,13 @@
     <artifactId>galaxy-common</artifactId>
 
     <modules>
-        <module>common-ai</module>
+        <module>common-langchain4j</module>
         <module>common-core</module>
         <module>common-mybatis</module>
         <module>common-redis</module>
         <module>common-satoken</module>
         <module>common-web</module>
+        <module>common-mongo</module>
     </modules>
 
 </project>
